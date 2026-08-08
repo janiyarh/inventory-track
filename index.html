@@ -1,0 +1,53 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Inventory Tracker</h1>
+        <p class="subtitle">Keep track of your products and stock levels.</p>
+
+        <div class="form">
+            <input type="text" id="productName" placeholder="Product name">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <input type="number" id="price" placeholder="Price" step="0.01">
+            <button onclick="addProduct()">Add Product</button>
+        </div>
+
+        <input 
+            type="text" 
+            id="search" 
+            placeholder="Search inventory..."
+            onkeyup="displayProducts()"
+        >
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="inventoryTable">
+            </tbody>
+        </table>
+
+        <p id="emptyMessage">No products in your inventory yet.</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
